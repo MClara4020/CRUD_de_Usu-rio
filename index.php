@@ -2,9 +2,13 @@
     $servername = "localhost"; 
     $username = "Xampp";
     $password = " ";
-    $dbname = "test";
     $usuarion = []; 
     // Usuarion do banco de dados
+    $conn = new mysqli($servername, $username, $password);
+    $sql = "SELECT * FROM usuarios";
+    $result = $conn->query($sql);
+    $conn->close();
+
 ?>
 
 <!DOCTYPE html>
